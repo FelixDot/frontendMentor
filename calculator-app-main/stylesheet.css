@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Overpass:wght@400;700&display=swap");
+
+.theme-1 {
+  --main-background: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+
+  /*keys*/
+  --operating-key: hsl(225, 21%, 49%);
+  --operating-key-shadow: hsl(224, 28%, 35%);
+  --operating-key-active: hsl(225, 21%, 70%);
+
+  --equals-key: hsl(6, 63%, 50%);
+  --equals-key-shadow: hsl(6, 70%, 34%);
+  --equals-key-active: hsl(6, 63%, 60%);
+
+  --main-key: hsl(30, 25%, 89%);
+  --main-key-shadow: hsl(28, 16%, 65%);
+  --main-key-active: hsl(0, 0%, 100%);
+
+  --header-text: hsl(0, 0%, 100%);
+  --primary-text: hsl(221, 14%, 31%);
+  --secondary-text: hsl(0, 0%, 100%);
+}
+
+.theme-2 {
+  --main-background: hsl(0, 0%, 90%);
+  --keypad-background: hsl(0, 5%, 81%);
+  --screen-background: hsl(0, 0%, 93%);
+
+  --operating-key: hsl(185, 42%, 37%);
+  --operating-key-shadow: hsl(185, 58%, 25%);
+  --operating-key-active: hsl(185, 42%, 50%);
+
+  --equals-key: hsl(25, 98%, 40%);
+  --equals-key-shadow: hsl(25, 99%, 27%);
+  --equals-key-active: hsl(25, 98%, 45%);
+
+  --main-key: hsl(45, 7%, 89%);
+  --main-key-shadow: hsl(35, 11%, 61%);
+  --main-key-active: hsl(45, 7%, 100%);
+
+  --primary-text: hsl(60, 10%, 19%);
+  --secondary-text: hsl(0, 0%, 100%);
+}
+
+.theme-3 {
+  --main-background: hsl(268, 75%, 9%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+
+  --operating-key: hsl(281, 89%, 26%);
+  --operating-key-shadow: hsl(285, 91%, 52%);
+  --operating-key-active: hsl(281, 89%, 35%);
+
+  --equals-key: hsl(176, 100%, 44%);
+  --equals-key-shadow: hsl(177, 92%, 70%);
+  --equals-key-active: hsl(176, 100%, 70%);
+
+  --main-key: hsl(268, 47%, 21%);
+  --main-key-shadow: hsl(290, 70%, 36%);
+  --main-key-active: hsl(268, 47%, 40%);
+
+  --header-text: hsl(52, 100%, 62%);
+  --primary-text: hsl(52, 100%, 62%);
+  --secondary-text: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-size: 32px;
+  font-family: "League Spartan";
+}
+body {
+  background-color: var(--main-background);
+  transition: 0.3s ease all;
+}
+
+.grid {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  grid-template-rows: 2rem 3.5rem 16rem;
+  gap: 0.5em;
+}
+.header {
+  display: flex;
+  color: var(--header-text);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+}
+.theme-label span {
+  font-size: 0.38em;
+}
+.theme-label {
+  display: flex;
+  justify-content: space-evenly;
+  width: 2.5rem;
+}
+.theme-controls {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.theme-button {
+  background-color: var(--keypad-background);
+  width: 2.4rem;
+  height: 0.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  margin-top: 5px;
+}
+
+input {
+  appearance: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: auto;
+
+  border-radius: 3rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+input:checked {
+  background-color: var(--equals-key);
+}
+
+input:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
+#theme-titel {
+  font-size: 0.38em;
+  letter-spacing: 1px;
+  align-self: flex-end;
+  padding-bottom: 4px;
+}
+.display {
+  background-color: var(--screen-background);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5em;
+}
+
+#display {
+  color: var(--header-text);
+  font-size: 32px;
+}
+
+.input {
+  background-color: var(--keypad-background);
+  padding: 0.8rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(5, 2rem) / repeat(4, 3rem);
+  gap: 0.8rem;
+  height: fit-content;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5em ;
+}
+
+.key {
+  color: var(--primary-text);
+  box-shadow: 0 5px var(--main-key-shadow);
+  background-color: var(--main-key);
+}
+.key:active {
+  background-color: var(--main-key-active);
+}
+
+.operation-key {
+  color: var(--secondary-text);
+  font-size: 0.8rem;
+  box-shadow: 0 5px var(--operating-key-shadow);
+  background-color: var(--operating-key);
+}
+
+.operation-key:active {
+  background-color: var(--operating-key-active);
+}
+
+.equals-key {
+  color: var(--secondary-text);
+  box-shadow: 0 5px var(--equals-key-shadow);
+  background-color: var(--equals-key);
+  grid-column: 3/5;
+}
+.reset {
+  grid-column: 1/3;
+}
+
+.equals-key:active {
+  background-color: var(--equals-key-active);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 11px;
+}

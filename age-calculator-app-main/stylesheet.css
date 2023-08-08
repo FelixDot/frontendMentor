@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--off-white);
+  font-family: "Poppins";
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 1rem 1rem 8rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin: 3em;
+}
+
+.input {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 7em;
+  grid-template-rows: 1fr 70px;
+  justify-content: start;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label {
+  letter-spacing: 1.5px;
+  font-size: 12px;
+}
+
+input {
+  border-radius: 10px;
+  border: 2px solid var(--off-white);
+  height: 2.5em;
+  width: 120px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 0.8em;
+}
+
+.error-message{
+  position:absolute;
+  color: var(--light-red);
+  font-style: italic;
+  font-weight: 400;
+  font-size: .7em;
+  margin-top: 0.5em;
+
+}
+
+.input-block {
+  margin-right: 20px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: auto;
+}
+
+hr {
+  flex: 1;
+  width: 10px;
+  margin: 1rem 0rem;
+  background-color: var(--off-white);
+}
+
+.submit-btn {
+  position: relative;
+  border-radius: 100%;
+  border: none;
+  padding: 0.7rem;
+  background-color: var(--purple);
+}
+
+.submit-btn img {
+  scale: 70%;
+}
+
+.show-result {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 2em;
+  line-height: 2.5em;
+}
+
+.show-result span {
+  color: var(--purple);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.input label {
+  color: var(--smokey-grey);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

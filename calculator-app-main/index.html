@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="main.js"></script>
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body class="theme-1" id="theme">
+    <div class="grid">
+      <div class="header">
+        <span>clac</span>
+        <div class="theme">
+          <span id="theme-titel">THEME</span>
+          <div class="theme-controls">
+            <div class="theme-label">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <form id="3-way-switch"class="theme-button">
+              <input
+                id="1"
+                name="theme-option"
+                type="radio"
+                value="theme-1"
+                checked="checked"
+              />
+              <input id="2" name="theme-option" value="theme-2" type="radio" />
+              <input id="3" name="theme-option" value="theme-3" type="radio" />
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="display">
+        <span class="display" id="display">TEST</span>
+      </div>
+      <div class="input">
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="operation-key">DEL</button>
+
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">+</button>
+
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">-</button>
+
+        <button class="key">.</button>
+        <button class="key">0</button>
+        <button class="key">/</button>
+        <button class="key">x</button>
+
+        <button class="operation-key reset">RESET</button>
+        <button class="equals-key">=</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
