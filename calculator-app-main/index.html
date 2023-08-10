@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,7 @@
               <span>2</span>
               <span>3</span>
             </div>
-            <form id="3-way-switch"class="theme-button">
+            <form id="3-way-switch" class="theme-button">
               <input
                 id="1"
                 name="theme-option"
@@ -43,38 +43,38 @@
               />
               <input id="2" name="theme-option" value="theme-2" type="radio" />
               <input id="3" name="theme-option" value="theme-3" type="radio" />
-              
             </form>
           </div>
         </div>
       </div>
 
       <div class="display">
-        <span class="display" id="display">TEST</span>
+        <span class="display" id="display">test</span>
       </div>
       <div class="input">
-        <button class="key">7</button>
-        <button class="key">8</button>
-        <button class="key">9</button>
-        <button class="operation-key">DEL</button>
+        <button class="key number" onclick="displayValue(7)">7</button>
+        <button class="key number">8</button>
+        <button class="key number">9</button>
+        <button id="delete" class="operation-key">DEL</button>
 
-        <button class="key">4</button>
-        <button class="key">5</button>
-        <button class="key">6</button>
-        <button class="key">+</button>
+        <button class="key number">4</button>
+        <button class="key number">5</button>
+        <button class="key number">6</button>
+        <button class="key operator">+</button>
 
-        <button class="key">1</button>
-        <button class="key">2</button>
-        <button class="key">3</button>
-        <button class="key">-</button>
+        <button class="key number">1</button>
+        <button class="key number">2</button>
+        <button class="key number">3</button>
+        <button class="key operator">-</button>
 
-        <button class="key">.</button>
-        <button class="key">0</button>
-        <button class="key">/</button>
-        <button class="key">x</button>
+        <button class="key number">.</button>
+        <button class="key number">0</button>
+        <button class="key operator">/</button>
+        <button class="key operator">x</button>
+        <button id="value">value</button>
 
-        <button class="operation-key reset">RESET</button>
-        <button class="equals-key">=</button>
+        <button id="reset" class="operation-key reset">RESET</button>
+        <button id="equals" class="equals-key">=</button>
       </div>
     </div>
 
