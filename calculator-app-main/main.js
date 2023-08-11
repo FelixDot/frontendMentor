@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         input = input.slice(0, input.length - 1);
       }
+      if (input.length >= 24) {
+        return; // Limit input to 24 characters
+      }
 
       input += value === "x" ? "*" : value;
       display.innerText = input;
@@ -75,11 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     display.innerText = input;
   });
 
-  document.getElementById("value").addEventListener("click", () => {
-    console.log(input);
-  });
-
   function isOperator(value) {
-    return ["+", "-", "*", "/"].includes(value);
+    return ["+", "-", "*", "/", "x"].includes(value);
   }
 });
