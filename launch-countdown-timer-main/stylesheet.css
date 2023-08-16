@@ -20,7 +20,7 @@
   width: 80%;
   margin-top: 50px;
   grid-template-columns: repeat(4, minmax(70px, 150px));
-  grid-gap: 40px;
+  grid-gap: 1em;
   align-content: center;
   justify-content: center;
 }
@@ -67,7 +67,7 @@
   top: 0%;
   transform: translateY(-50%);
   width: 6px;
-  height: 12px;
+  height: 0.6em;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: var(--black);
@@ -90,10 +90,7 @@
   top: auto;
   bottom: 45%;
 }
-.bottom.animate::after,
-.bottom.animate::before {
-  top: 0%;
-}
+
 .top {
   position: absolute;
   top: 0;
@@ -101,16 +98,7 @@
   border-radius: 8px 8px 0 0;
   transform-origin: center bottom;
 }
-.top.animate {
-  z-index: 1000;
-  animation: downflip 500ms linear 0ms 1 normal forwards;
-}
-.bottom.animate {
-  z-index: 1000;
-  animation: upflip 500ms linear 500ms 1 normal forwards;
-  position: absolute;
-  transform: rotateX(90deg);
-}
+
 .top > h1 {
   transform: translateY(33%);
   color: #d4506f;
@@ -136,21 +124,14 @@ body {
   align-items: center;
   justify-content: center;
   height: 70vh;
+
 }
 
 header {
-  font-size: 12px;
+  font-size: 1rem;
   letter-spacing: 5px;
   width: 86%;
   text-align: center;
-}
-
-p {
-  color: var(--greyish-blue);
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-top: 13px;
 }
 
 footer {
@@ -163,13 +144,26 @@ footer {
   justify-content: center;
 }
 
+h3 {
+  text-transform: uppercase;
+  color: var(--greyish-blue);
+  text-align: center;
+}
 .socialmedia {
-  width: 36%;
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+.icon {
+  
+  margin: 5px;
+  transition: color 0.3s;
+}
+.icon:hover {
+  filter: invert(60%) sepia(43%) saturate(6017%) hue-rotate(315deg)
+    brightness(109%) contrast(97%);
+}
 .mountain {
   z-index: -100;
   position: fixed;
@@ -182,5 +176,42 @@ footer {
 .attribution {
   font-size: 11px;
   text-align: center;
-  
 }
+
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size: 0.8em;
+  }
+  .flip-card {
+    height: 6rem;
+    width: 6rem;
+  }
+
+}
+
+@media only screen and (max-width: 490px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 0.6em;
+  }
+  h2{
+    font-size: 0.9em;
+  }
+  .flip-card {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .countdown{
+    gap: 0.1em;
+  }
+  .container{
+    width: fit-content;
+  }
+}
+
