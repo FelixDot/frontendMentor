@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
     <link href="stylesheet.css" rel="stylesheet" />
 
     <link
@@ -35,39 +34,31 @@
           type="text"
           placeholder="Search for any IP addresss or domain"
         />
-        <button class="submit-btn" type="button">
+        <button class="submit-btn" id="submit-btn" type="button">
           <img src="images/icon-arrow.svg" alt="submit-button" />
         </button>
       </form>
       <section class="information">
-
+        
         <div class="info-box">
           <h4>IP ADDRESS</h4>
-          <p id="ip-address ">192.168.255.255</p>
+          <p id="ip-address"></p>
         </div>
-        
-        <span class="vertical-line"></span>
 
         <div class="info-box">
           <h4>LOCATION</h4>
-          <p id="ip-address ">Brooklyn, NY 1001</p>
+          <p id="location"></p>
         </div>
-
-        <span class="vertical-line"></span>
 
         <div class="info-box">
           <h4>TIMEZONE</h4>
-          <!-- add offset value dynamically using the API -->
-          <p id="ip-address ">UTC-05:00</p>
+          <p id="timezone"></p>
         </div>
-
-        <span class="vertical-line"></span>
 
         <div class="info-box">
           <h4>ISP</h4>
-          <p id="ip-address ">SpaceX Starlink</p>
+          <p id="ips"></p>
         </div>
-
       </section>
     </header>
     <main>
