@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  So, you want to travel to
-  Space
-  Let’s face it; if you want to go to space, you might as well genuinely go to 
-  outer space and not hover kind of on the edge of it. Well sit back, and relax 
-  because we’ll give you a truly out of this world experience!
-
-  Explore
-
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="home">
+    <header>
+      <img class="logo" src="assets/shared/logo.svg" alt="logo" />
+      <div class="line-container">
+        <hr class="line" />
+      </div>
+      <nav class="main-nav">
+        <ol class="nav-list">
+          <a href="index.html" class="nav-active nav-item">
+            <li>
+              <span>Home</span>
+            </li>
+          </a>
+          <a href="destination-moon.html" class="nav-item">
+            <li>
+              <span>Destination</span>
+            </li>
+          </a>
+          <a href="crew-commander.html" class="nav-item">
+            <li>
+              <span>Crew</span>
+            </li>
+          </a>
+          <a href="technology-vehicle.html" class="nav-item">
+            <li>
+              <span>Technology</span>
+            </li>
+          </a>
+        </ol>
+      </nav>
+    </header>
+    <main class="home-main">
+      <section class="home-section">
+        <div class="home-text">
+          <h3>So, you want to travel to</h3>
+          <h1>Space</h1>
+          <article>
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </article>
+        </div>
+        <a class="explore-btn" href="destination-moon.html"> Explore! </a>
+      </section>
+    </main>
+  </body>
 </html>

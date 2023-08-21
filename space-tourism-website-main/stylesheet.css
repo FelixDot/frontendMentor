@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --clr-dark: hsl(230 35% 7%);
+  --clr-light: hsl(231 77% 90%);
+  --clr-white: hsl(0 0% 100%);
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
+body,
+html {
+  height: 100%;
+  font-family: var(--ff-sans-cond);
+  color: var(--clr-light);
+}
+
+/*-----------------Header--------------------*/
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: 3.5em;
+}
+.line-container {
+  width: 55em;
+  margin-right: -50px;
+  z-index: 10;
+}
+.line {
+  border: 0.1em solid grey;
+  flex-shrink: 1;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  height: 6em;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  margin-left: -1em;
+  padding-left: 5em;
+  color: var(--clr-white);
+  list-style-type: none; /* Entfernt die Standardnummern */
+  counter-reset: item -1; /* Setzt den Zähler zurück */
+}
+
+li::before {
+  content: counter(
+    item,
+    decimal-leading-zero
+  ); /* Fügt die Zahlen mit führender Null hinzu */
+  counter-increment: item; /* Inkrementiert den Zähler */
+  padding-right: 5px; /* Abstand zwischen Zahl und Text */
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.nav-list > a > li {
+  margin: 0 15px;
+  font-size: 14px;
+  display: inline;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-white);
+}
+.nav-list > a > li > span {
+  letter-spacing: 4px;
+}
+a {
+  text-decoration: none;
+}
+.nav-item {
+  margin: 0 2em;
+  padding: 2.4em 0;
+  border: 0;
+}
+.nav-item:hover {
+  border-bottom: 2px solid grey;
+}
+
+.nav-active {
+  border-bottom: 2px solid var(--clr-white);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .line {
+    display: none;
+  }
+}
+
+/*-----------------HOME--------------------*/
+.home {
+  background-image: url(starter-code/assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+
+.home-main {
+  position: relative;
+  top: 15em;
+  margin: 0 6em;
+  display: flex;
+  flex-direction: row;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 95%;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-light);
+  width: min-content;
+  margin-right: 3em;
+}
+
+.home-text h3 {
+  letter-spacing: 4.75px;
+  font-size: 1.6em;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.home-text > h1 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-family: var(--ff-serif);
+  font-weight: 300;
+  font-size: 9em;
+  margin: 20px 0;
+}
+
+.home-text > article {
+  font-size: 20px;
+  line-height: 1.6em;
+  vertical-align: middle;
+  margin-right: 2em;
+}
+
+.explore-btn-container {
+  text-align: center;
+}
+
+.explore-btn {
+  display: flex;
+  align-self: center;
+  background-color: var(--clr-white);
+  border-radius: 100%;
+  line-height: 5em;
+  padding: 1.5em;
+  color: var(--clr-dark);
+  text-decoration: none;
+  font-family: var(--ff-serif);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2.3em;
+}
+
+@media screen and (max-width: 1000px) {
+}
+/*----------------DESTINATION--------------*/
+
+.destination-moon {
+  background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+
+.destination-mars {
+  background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+.destination-europa {
+  background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+.destination-titan {
+  background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100%;
+}
+
+.container {
+  margin-right: 4em;
+}
+.primary-title {
+  text-transform: uppercase;
+  font-family: var(--ff-sans-cond);
+  color: var(--clr-white);
+  font-weight: 100;
+  letter-spacing: 4px;
+  font-size: 30px;
+  margin-bottom: 4em;
+}
+
+.primary-title > span {
+  color: gray;
+  font-weight: bold;
+  margin: 0 1em;
+}
+.destination-img {
+  margin-left: 4em;
+}
+
+.destination-main {
+  display: flex;
+  justify-content: space-around;
+  margin: 3em;
+}
+
+.destination-text-container {
+  margin-top: 7em;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.destination-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.destination-nav-item {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-family: var(--ff-sans-cond);
+}
+.destination-nav-item:hover {
+  border-bottom: 2px solid grey;
+}
+.nav-active {
+  border-bottom: 2px solid var(--clr-light);
+  pointer-events: none;
+}
+
+.secondar-title {
+  margin: 3rem 0 1rem 0;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-family: var(--ff-serif);
+  font-weight: 100;
+  font-size: 7em;
+}
+.main-info-text {
+  font-family: var(--ff-sans-normal);
+  font-size: 19px;
+  line-height: 1.7em;
+  max-width: 76%;
+  padding-bottom: 2.5em;
+  border-bottom: 1px solid grey;
+
+}
+
+.second-info-text {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.box > p {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.info {
+  font-family: var(--ff-sans-cond);
+  letter-spacing: 2px;
+  font-size: 15px;
+  padding: 2em 0 1em;
+}
+.value {
+  font-family: var(--ff-serif);
+  font-size: 26px;
+}
