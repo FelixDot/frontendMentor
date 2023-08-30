@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/stylesheet.css" />
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Space capsule
-
-  A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
-  capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
-  you'll spend your time during the flight. It includes a space gym, cinema, 
-  and plenty of other activities to keep you entertained.
-</body>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="technology">
+    <header>
+      <img class="logo" src="assets/shared/logo.svg" alt="logo" />
+      <div class="line-container">
+        <hr class="line" />
+      </div>
+      <nav class="main-nav">
+        <ol class="nav-list">
+          <a href="index.html" class="nav-item">
+            <li>
+              <span>Home</span>
+            </li>
+          </a>
+          <a href="destination-moon.html" class="nav-item">
+            <li>
+              <span>Destination</span>
+            </li>
+          </a>
+          <a href="crew-commander.html" class="nav-item">
+            <li>
+              <span>Crew</span>
+            </li>
+          </a>
+          <a href="technology-vehicle.html" class="nav-item nav-active">
+            <li>
+              <span>Technology</span>
+            </li>
+          </a>
+        </ol>
+      </nav>
+    </header>
+    <main class="crew-main">
+      <section>
+        <h2 class="primary-title"><span>03</span> Space launch 101</h2>
+        <div class="tech-main">
+          <nav class="tech-nav">
+            <a class="tech-nav-item" href="technology-vehicle.html">1</a>
+            <a class="tech-nav-item" href="technology-spaceport.html">2</a>
+            <a
+              class="tech-nav-item tech-nav-active"
+              href="technology-capsule.html"
+              >3</a
+            >
+          </nav>
+          <article class="text">
+            <h3 class="tech-secondary-title">The terminology...</h3>
+            <h1 class="crew-name">Space capsule</h1>
+            <p class="tech-text">
+              A space capsule is an often-crewed spacecraft that uses a
+              blunt-body reentry capsule to reenter the Earth's atmosphere
+              without wings. Our capsule is where you'll spend your time during
+              the flight. It includes a space gym, cinema, and plenty of other
+              activities to keep you entertained.
+            </p>
+          </article>
+        </div>
+      </section>
+      <img
+        class="tech-img"
+        src="assets/technology/image-space-capsule-portrait.jpg"
+        alt=""
+      />
+    </main>
+  </body>
 </html>

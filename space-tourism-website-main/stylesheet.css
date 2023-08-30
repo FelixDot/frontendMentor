@@ -109,11 +109,12 @@ a {
 
 /*-----------------HOME--------------------*/
 .home {
-  background-image: url(starter-code/assets/home/background-home-desktop.jpg);
-  background-repeat: no-repeat;
+  background: url(starter-code/assets/home/background-home-desktop.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: bottom;
-  height: 100%;
 }
 
 .home-main {
@@ -186,11 +187,12 @@ a {
 /*----------------DESTINATION--------------*/
 
 .destination {
-  background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
-  background-repeat: no-repeat;
+  background: url(starter-code/assets/destination/background-destination-desktop.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: bottom;
-  height: 100%;
 }
 
 .container {
@@ -259,14 +261,10 @@ h1 {
   margin: 3rem 0 1rem 0;
   font-size: 7em;
 }
-.main-info-text {
+.planet-info {
+  width: 25em;
   height: 8em;
-  font-family: var(--ff-sans-normal);
-  font-size: 19px;
-  line-height: 1.7em;
-  max-width: 76%;
 }
-
 .second-info-text {
   border-top: 1px solid grey;
   width: 60%;
@@ -291,8 +289,9 @@ h1 {
 }
 /*----------------CREW---------------*/
 
-body {
-  background: url(starter-code/assets/crew/background-crew-desktop.jpg) no-repeat center center fixed;
+.crew {
+  background: url(starter-code/assets/crew/background-crew-desktop.jpg)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -304,7 +303,7 @@ body {
   justify-content: space-between;
   flex-direction: row;
   margin: 0 7rem;
-  height: 80vh
+  height: 80vh;
 }
 
 .crew-name {
@@ -326,15 +325,18 @@ body {
   font-size: 2em;
   font-weight: 100;
 }
+.crew-info {
+  height: 8em;
+  width: 25em;
+}
 
-.slider-controller{
+.slider-controller {
   display: flex;
   flex-direction: row;
   justify-content: start;
-
 }
 
-.slider-circle{
+.slider-circle {
   margin-top: 1em;
   margin-right: 1.5em;
   border-radius: 100%;
@@ -342,8 +344,70 @@ body {
   background-color: rgb(92, 90, 90);
 }
 
-.slider-active{
+.slider-active {
   background-color: white;
 }
 
+/*-------------Technology------------*/
+.technology {
+  background: url(starter-code/assets/technology/background-technology-desktop.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.tech-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vh;
+}
+.tech-nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4em;
+  gap: 2em;
 
+}
+.tech-nav-item {
+  font-family: var(--ff-serif);
+  font-size: 2.2em;
+  color: var(--clr-white);
+  text-decoration: none;
+  border-radius: 100%;
+  padding: 30px;
+  border: 1px solid grey;
+  line-height: 15px;
+}
+.tech-nav-active {
+  background-color: var(--clr-white);
+  color: var(--clr-dark);
+}
+
+.tech-secondary-title {
+  text-transform: uppercase;
+  font-family: var(--ff-sans-cond);
+  color: var(--clr-white);
+  font-weight: 50;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.tech-text {
+  width: 24.5em;
+  vertical-align: middle;
+}
+
+.text {
+  font-family: var(--ff-sans-normal);
+  font-size: 19px;
+  line-height: 1.7em;
+}
+
+
+.tech-img{
+  height: min-content;
+  align-self: center;
+}
