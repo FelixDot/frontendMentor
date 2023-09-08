@@ -55,13 +55,11 @@ body {
 }
 
 .left-info ul li {
+  justify-content: center;
+  margin-left: 2rem;
+  margin: 1rem 0;
   list-style-image: url(assets/images/icon-list.svg);
-  list-style-position: inside;
-}
-
-.left-info ul li::before {
-  content: "";
-  margin-right: 0.5rem;
+  list-style-position: outside;
 }
 
 .form-item {
@@ -162,7 +160,7 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
     display: initial;
     line-height: 1.4;
@@ -182,11 +180,13 @@ body {
     grid-row: 2;
   }
   .left-info ul li {
-    margin-bottom: 1rem;
+    margin-left: 2rem;
+    list-style-position: outside;
   }
   .right img {
     width: 100%;
   }
+
   .confirmed-message.active {
     height: 100vh;
     padding: 14rem 2rem 2rem 2rem;

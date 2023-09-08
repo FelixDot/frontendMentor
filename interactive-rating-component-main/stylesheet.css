@@ -41,7 +41,6 @@ p {
   display: flex;
 }
 .rating-screen {
-  
   margin: 30px;
 }
 .rating-number {
@@ -62,7 +61,6 @@ p {
   width: 55px;
   text-align: center;
   font-weight: 700;
-  
 }
 .rating-number button:hover {
   background-color: var(--light-grey);
@@ -92,6 +90,10 @@ p {
   background-color: var(--white);
   color: var(--orange);
 }
+#submit-btn:hover {
+  background-color: var(--light-grey);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -126,4 +128,30 @@ p {
 
 .rating-result-text {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 340px;
+  }
+
+  .rating-text {
+    font-size: 14px;
+  }
+  .rating-result-text {
+    font-size: 14px;
+  }
+  .rating-number button {
+    color: var(--medium-grey);
+    background-color: var(--medium-grey-op);
+    border-radius: 50%;
+    padding: 1em;
+    cursor: pointer;
+    border: none;
+    margin: 1.5em 0;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    width: 40px;
+    text-align: center;
+  }
 }
